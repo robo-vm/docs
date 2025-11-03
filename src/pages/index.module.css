@@ -21,3 +21,12 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Ensure hero text is white */
+.heroBanner :global(.hero__title) {
+  color: #ffffff !important;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  color: #e2e8f0 !important;
+}

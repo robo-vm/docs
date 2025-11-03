@@ -65,6 +65,23 @@ html[data-theme='dark'] body {
   background: linear-gradient(135deg, #0b1e3e 0%, #0f2649 100%);
 }
 
+/* Hero text - white color */
+.hero__title {
+  color: #ffffff !important;
+}
+
+.hero__subtitle {
+  color: #e2e8f0 !important;
+}
+
+.hero--primary .hero__title {
+  color: #ffffff !important;
+}
+
+.hero--primary .hero__subtitle {
+  color: #e2e8f0 !important;
+}
+
 /* Code block styling */
 .prism-code {
   background-color: #0f2649 !important;

@@ -80,7 +80,7 @@ const config: Config = {
       title: 'RoboVM',
       logo: {
         alt: 'RoboVM Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
