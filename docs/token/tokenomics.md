@@ -4,41 +4,30 @@ sidebar_position: 2
 
 # Tokenomics
 
-Economic model and token distribution strategy for ROBOX (RX).
+Economic model and token distribution strategy for RoboVM (RVM).
 
 ## Token Distribution
 
-### Initial Allocation
+### Total Supply
 
 ```
 ┌─────────────────────────────────────┐
-│ Total Supply: 1,000,000 RX          │
-├─────────────────────────────────────┤
-│ Task Rewards Pool:     400,000 RX   │
-│ Initial Robot Grants:  300,000 RX   │
-│ Development Team:       200,000 RX   │
-│ Community Reserve:     100,000 RX   │
+│ Total Supply: 1,000,000,000 RVM     │
 └─────────────────────────────────────┘
 ```
 
-### Vesting Schedule
+### Distribution Strategy
 
-**Development Team:**
-- 25% at launch
-- 25% after 6 months
-- 25% after 12 months
-- 25% after 18 months
+**Note:** The final tokenomics and distribution strategy have not yet been determined. The allocation percentages, distribution mechanisms, and economic parameters are still under development and will be finalized closer to the mainnet launch.
 
-**Robot Grants:**
-- Distributed based on robot registration
-- 1,000 RX per verified robot
-- Maximum 300 robots
+Key considerations for future tokenomics design:
+- Task rewards and incentives
+- Robot participation mechanisms
+- Community and governance structure
+- Development and operational needs
+- Long-term sustainability
 
-**Community Reserve:**
-- Distributed via governance
-- Community proposals
-- Bug bounties
-- Incentive programs
+The final tokenomics will be transparently communicated to the community before any token distribution occurs.
 
 ## Economic Model
 
@@ -47,11 +36,11 @@ Economic model and token distribution strategy for ROBOX (RX).
 ```
 Task Creation
     │
-    ├─> RX Locked in Contract
+    ├─> RVM Locked in Contract
     │
 Task Completion
     │
-    ├─> RX Transferred to Robot
+    ├─> RVM Transferred to Robot
     │
 Robot Usage
     │
@@ -85,7 +74,7 @@ Robot Usage
 
 ### Voting Power
 
-1 RX = 1 Vote
+1 RVM = 1 Vote
 
 **Proposal Types:**
 - Parameter changes (reward rates, fees)
@@ -95,7 +84,7 @@ Robot Usage
 
 ### Voting Thresholds
 
-- **Minimum stake:** 1,000 RX to propose
+- **Minimum stake:** 1,000 RVM to propose
 - **Quorum:** 10% of total supply
 - **Approval:** 51% majority
 
@@ -153,4 +142,3 @@ Robot Usage
 ---
 
 Next: [Smart Contract](/docs/token/smart-contract) or [Use Cases](/docs/token/use-cases)
-

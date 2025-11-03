@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        ROBOX (RX) token powers the network. Robots earn tokens for completed tasks,
+        RoboVM (RVM) token powers the network. Robots earn tokens for completed tasks,
         stake for reputation, and participate in governance decisions.
       </>
     ),

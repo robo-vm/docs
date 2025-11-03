@@ -10,8 +10,8 @@ Development phases and milestones for RoboVM.
 
 **Deliverables:**
 - Monorepo structure: `robot/`, `chain/`, `ops/`, `web/`
-- Network decision: **Sepolia** (Ethereum testnet) or **Polygon Amoy**
-- Token: **ERC-20 "ROBOX (RX)"** on testnet
+- Network decision: **BSC** (Ethereum testnet) or **BSC Testnet**
+- Token: **BEP-20 "RoboVM (RVM)"** on testnet
 
 **Stack:**
 - ROS2 Humble, Gazebo (or Webots), Python 3.10
@@ -38,17 +38,17 @@ Development phases and milestones for RoboVM.
 
 ---
 
-## Phase 2: Smart Contracts + Token RX (Week 2)
+## Phase 2: Smart Contracts + Token RVM (Week 2)
 
-**Objective:** Contracts for Tasks + ERC-20 RX, deploy to testnet.
+**Objective:** Contracts for Tasks + BEP-20 RVM, deploy to testnet.
 
 **Steps:**
-1. **ERC-20 RX** (OpenZeppelin)
+1. **BEP-20 RVM** (OpenZeppelin)
 2. **Contract "RoboTask"** (task registry + escrow):
-   - `createTask(desc, rewardRX, dataHash?)`
+   - `createTask(desc, rewardRVM, dataHash?)`
    - `acceptTask(taskId)`
    - `submitResult(taskId, resultCid)` (IPFS CID)
-   - `finalize(taskId)` → transfers `rewardRX` to `assigned`
+   - `finalize(taskId)` → transfers `rewardRVM` to `assigned`
 3. **Deploy scripts** Hardhat + `.env` with test key and RPC
 
 **Deliverables:** Contract addresses on testnet + Hardhat unit tests.
@@ -66,9 +66,9 @@ Development phases and milestones for RoboVM.
    - Calls `acceptTask` via web3.py
 2. **Task execution** in simulation (e.g., waypoint traversal)
 3. **Upload result** (log/map) to IPFS → CID → `submitResult`
-4. **Finalize** (task creator) → RX reward
+4. **Finalize** (task creator) → RVM reward
 
-**Deliverable:** End-to-end demo: `createTask` → robot accepts → executes → posts `resultCid` → finalize & pay RX.
+**Deliverable:** End-to-end demo: `createTask` → robot accepts → executes → posts `resultCid` → finalize & pay RVM.
 
 ---
 
@@ -78,7 +78,7 @@ Development phases and milestones for RoboVM.
 
 **Steps:**
 1. Extend contract with **bidding**:
-   - `placeBid(taskId, priceRX, etaSeconds)`
+   - `placeBid(taskId, priceRVM, etaSeconds)`
    - `assignBestBid(taskId)` (automatic/semi-automatic)
 2. ROS2 node on each robot calculates cost (battery, distance) → bids
 3. Simple dashboard (React + ethers.js) for visualization:
@@ -94,7 +94,7 @@ Development phases and milestones for RoboVM.
 
 **Steps:**
 1. **Reputation** per address: +1 for correct task completion, -X for disputes
-2. **Staking**: To **accept** tasks > N RX, robot locks m RX as guarantee; penalty on fraud
+2. **Staking**: To **accept** tasks > N RVM, robot locks m RVM as guarantee; penalty on fraud
 3. **Result verification**: Second robot (auditor) confirms hash/map (paid small reward)
 
 **Deliverables:** Test of "dispute" and staking slashing.
@@ -106,7 +106,7 @@ Development phases and milestones for RoboVM.
 **Objective:** Performance and reliability.
 
 **Steps:**
-- Move events to **L2** (Polygon/Arbitrum) + optional **state channels** for micro-payments
+- Move events to **L2** (BSC/Arbitrum) + optional **state channels** for micro-payments
 - Logs and telemetry off-chain (TimescaleDB/InfluxDB + Grafana)
 - CI/CD: lint + tests + deploy scripts + contract size check
 

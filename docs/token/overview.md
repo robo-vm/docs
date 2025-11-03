@@ -2,20 +2,20 @@
 sidebar_position: 1
 ---
 
-# ROBOX Token (RX) Overview
+# RoboVM Token (RVM) Overview
 
-ROBOX (RX) is the native ERC-20 token that powers the RoboVM ecosystem.
+RoboVM (RVM) is the native BEP-20 token that powers the RoboVM ecosystem.
 
 ## Token Specifications
 
 | Parameter | Value |
 |-----------|-------|
-| **Name** | ROBOX |
-| **Symbol** | RX |
-| **Type** | ERC-20 |
-| **Total Supply** | 1,000,000 RX |
+| **Name** | RoboVM |
+| **Symbol** | RVM |
+| **Type** | BEP-20 |
+| **Total Supply** | 1,000,000,000 RVM |
 | **Decimals** | 18 |
-| **Network** | Ethereum (Sepolia testnet) / Polygon |
+| **Network** | Binance Smart Chain (BSC) |
 
 ## Token Functions
 
@@ -30,7 +30,7 @@ A robot pays another robot for access to data:
 **Example:**
 ```solidity
 // Robot B pays Robot A for map data
-roboToken.transfer(robotA, 5 * 10**18); // 5 RX
+roboToken.transfer(robotA, 5 * 10**18); // 5 RVM
 ```
 
 ### 2. Rewards for Completed Tasks
@@ -39,7 +39,7 @@ Smart contract automatically releases tokens to robot that completes a mission.
 
 **Example:**
 ```solidity
-// Task reward: 100 RX
+// Task reward: 100 RVM
 // Upon completion:
 roboToken.transfer(robotAddress, 100 * 10**18);
 ```
@@ -63,24 +63,20 @@ Token holders can vote on:
 
 ### Distribution
 
-```
-Total Supply: 1,000,000 RX
-├─ 40% (400,000 RX) - Task Rewards Pool
-├─ 30% (300,000 RX) - Initial Robot Grants
-├─ 20% (200,000 RX) - Development Team
-└─ 10% (100,000 RX) - Community Reserve
-```
+**Note:** The final tokenomics and distribution strategy have not yet been determined. The allocation percentages and distribution mechanisms are still under development.
+
+Total Supply: 1,000,000,000 RVM
 
 ### Reward Mechanism
 
 **Task Completion:**
-- Standard task: 10-100 RX
-- Complex task: 100-1000 RX
-- Emergency task: 500-5000 RX
+- Standard task: 10-100 RVM
+- Complex task: 100-1000 RVM
+- Emergency task: 500-5000 RVM
 
 **Staking Rewards:**
 - Staked tokens earn interest: 5% APR
-- Paid in RX tokens
+- Paid in RVM tokens
 
 **Reputation Bonuses:**
 - High reputation robots: +10% reward multiplier
@@ -109,20 +105,20 @@ Total Supply: 1,000,000 RX
 ## Token Flow Example
 
 ```
-1. Creator funds task: 100 RX
+1. Creator funds task: 100 RVM
    └─> Locked in smart contract
 
 2. Robot A completes task
-   └─> Receives 100 RX
+   └─> Receives 100 RVM
 
-3. Robot A pays Robot B for map data: 10 RX
-   └─> Robot B receives 10 RX
+3. Robot A pays Robot B for map data: 10 RVM
+   └─> Robot B receives 10 RVM
 
-4. Robot B stakes 50 RX for reputation
+4. Robot B stakes 50 RVM for reputation
    └─> Locked, earns interest
 
 5. Robot B completes high-value task
-   └─> Receives 200 RX (with reputation bonus)
+   └─> Receives 200 RVM (with reputation bonus)
 ```
 
 ## Integration with Smart Contracts
@@ -150,7 +146,7 @@ roboTask.createTask("Mission", 100 * 10**18);
 
 ## Security Considerations
 
-- **Standard ERC-20** - Well-audited implementation
+- **Standard BEP-20** - Well-audited implementation (ERC-20 compatible)
 - **OpenZeppelin** - Industry-standard library
 - **Access controls** - Minting restricted
 - **Reentrancy protection** - Safe transfers

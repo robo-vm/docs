@@ -18,7 +18,7 @@ Quick start guide for RoboVM development and deployment.
 ### Blockchain Setup
 
 - **MetaMask** or compatible wallet
-- **Sepolia testnet** ETH (for gas fees)
+- **BSC Testnet** ETH (for gas fees)
 - **Hardhat** or Foundry for contract development
 
 ### Robotics Setup
@@ -50,11 +50,11 @@ npx hardhat test
 ### 3. Deploy Contracts
 
 ```bash
-# Deploy to Sepolia testnet
-npx hardhat run scripts/deploy.js --network sepolia
+# Deploy to BSC Testnet
+npx hardhat run scripts/deploy.js --network bscTestnet
 
 # Save contract addresses to .env
-ROBOX_TOKEN_ADDRESS=0x...
+ROBOVM_TOKEN_ADDRESS=0x...
 ROBO_TASK_ADDRESS=0x...
 REPUTATION_ADDRESS=0x...
 ```
@@ -131,7 +131,7 @@ const roboTask = new ethers.Contract(
 
 const tx = await roboTask.createTask(
     "Test mapping task",
-    ethers.utils.parseEther("10") // 10 RX
+    ethers.utils.parseEther("10") // 10 RVM
 );
 await tx.wait();
 ```
@@ -163,7 +163,7 @@ tx = robo_task.functions.submitResult(
 
 - [Architecture Overview](/docs/architecture/overview)
 - [Smart Contracts](/docs/contracts/robo-task)
-- [ROBOX Token](/docs/token/overview)
+- [RoboVM Token](/docs/token/overview)
 - [Roadmap](/docs/roadmap)
 
 ## Troubleshooting
@@ -174,7 +174,7 @@ tx = robo_task.functions.submitResult(
 - **Solution:** Check RPC URL and private key in `.env`
 
 **Problem:** Robot not connecting to blockchain
-- **Solution:** Verify network ID matches Sepolia (11155111)
+- **Solution:** Verify network ID matches BSC Testnet (97)
 
 **Problem:** IPFS not accessible
 - **Solution:** Check Docker container is running: `docker ps`

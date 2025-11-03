@@ -21,15 +21,15 @@ Blockchain functions as a **robot consensus network**:
 
 ### Recommended Networks
 
-- **Sepolia** (Ethereum testnet) - For development and testing
-- **Polygon Amoy** - Lower gas costs, faster transactions
+- **BSC Testnet** (Ethereum testnet) - For development and testing
+- **BSC Testnet** - Lower gas costs, faster transactions
 - **Arbitrum/Optimism** - Layer 2 solutions for scalability
 
 ### Production Considerations
 
 For production, consider:
-- **Polygon** - Low fees, good for frequent transactions
-- **Ethereum Mainnet** - Maximum security, higher costs
+- **BSC** - Low fees, good for frequent transactions
+- **BSC Mainnet** - Maximum security, higher costs
 - **Custom L2** - Optimized for robot-specific use cases
 
 ## Key Features
@@ -61,22 +61,22 @@ No single point of control:
 ### Scenario 1: Automatic Task Allocation
 
 1. A smart contract publishes a **new mission** ("Map area X")
-2. Interested robots send offers (transactions) with estimated cost in RX tokens
+2. Interested robots send offers (transactions) with estimated cost in RVM tokens
 3. Contract automatically selects robot with optimal offer
-4. Upon completion, robot sends hash of collected data → contract verifies → releases RX reward
+4. Upon completion, robot sends hash of collected data → contract verifies → releases RVM reward
 
 ### Scenario 2: Collaboration and Data Exchange
 
 1. Robot A has an updated local map
 2. Robot B needs that area → sends request on blockchain
-3. Robot A requests 5 RX tokens for data
+3. Robot A requests 5 RVM tokens for data
 4. After payment confirmation, data transmitted off-chain (via IPFS or secure API)
 
 ## Smart Contract Architecture
 
 ### Core Contracts
 
-1. **RoboToken (RX)** - ERC-20 token
+1. **RoboToken (RVM)** - BEP-20 token
 2. **RoboTask** - Task management
 3. **Reputation** - Robot reputation and staking
 

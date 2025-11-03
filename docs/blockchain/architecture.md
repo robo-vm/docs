@@ -10,7 +10,7 @@ Detailed architecture of the blockchain layer in RoboVM.
 
 ### Layer 1: Token Layer
 
-**RoboToken.sol** - Base ERC-20 token
+**RoboToken.sol** - Base BEP-20 token
 - Standard token functionality
 - Minting and burning
 - Transfer restrictions (optional)
@@ -51,7 +51,7 @@ User/Robot
     └─> finalize() ──> RoboTask Contract
                            │
                            ├─> Verify result
-                           ├─> Transfer RX from RoboToken
+                           ├─> Transfer RVM from RoboToken
                            └─> Update Reputation
 ```
 
@@ -149,7 +149,7 @@ def complete_task(task_id, result_data):
 
 ### Layer 2 Options
 
-- **Polygon** - Sidechain with Ethereum compatibility
+- **BSC** - Sidechain with BSC compatibility
 - **Arbitrum** - Optimistic rollup
 - **Optimism** - Optimistic rollup
 - **State Channels** - For frequent micro-payments

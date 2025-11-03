@@ -61,7 +61,7 @@ function createTask(
 ```javascript
 await roboTask.createTask(
     "Map building floor 3",
-    web3.utils.toWei("100", "ether"), // 100 RX
+    web3.utils.toWei("100", "ether"), // 100 RVM
     { from: creatorAddress }
 );
 ```
@@ -269,5 +269,5 @@ event_filter = robo_task.events.TaskCreated.create_filter(
 
 ---
 
-Next: [Reputation Contract](/docs/contracts/reputation) or [ROBOX Token](/docs/token/overview)
+Next: [Reputation Contract](/docs/contracts/reputation) or [RoboVM Token](/docs/token/overview)
 

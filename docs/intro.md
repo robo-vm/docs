@@ -26,7 +26,7 @@ RoboVM combines three key technologies:
 
 - 🤖 **Autonomous Decision Making** - Each robot operates independently
 - ⛓️ **Blockchain Integration** - Transparent and immutable task coordination
-- 🪙 **ROBOX Token (RX)** - Native ERC-20 token for rewards and payments
+- 🪙 **RoboVM Token (RVM)** - Native BEP-20 token for rewards and payments
 - 🖥️ **VM Simulation** - Safe testing environment before physical deployment
 - 🔒 **Decentralized Architecture** - No single point of failure
 
@@ -42,7 +42,7 @@ RoboVM combines three key technologies:
 Explore the documentation to learn more about:
 - [Architecture Overview](/docs/architecture/overview)
 - [Blockchain Integration](/docs/blockchain/overview)
-- [ROBOX Token](/docs/token/overview)
+- [RoboVM Token](/docs/token/overview)
 - [Getting Started Guide](/docs/getting-started)
 
 ---

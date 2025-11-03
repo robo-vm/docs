@@ -231,7 +231,7 @@ Stake Bonus = min(Staked Amount / 1000, 100)
 Robot A:
 - Tasks Completed: 50
 - Tasks Failed: 2
-- Staked: 5,000 RX
+- Staked: 5,000 RVM
 - Disputes: 0
 
 Score = 0 + (50 × 10) - (2 × 50) + 100 - 0
@@ -241,5 +241,5 @@ Score = 0 + (50 × 10) - (2 × 50) + 100 - 0
 
 ---
 
-Next: [ROBOX Token](/docs/token/overview) or [Getting Started](/docs/getting-started)
+Next: [RoboVM Token](/docs/token/overview) or [Getting Started](/docs/getting-started)
 

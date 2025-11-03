@@ -37,7 +37,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'ROBOX Token',
+      label: 'RoboVM Token',
       items: [
         'token/overview',
         'token/tokenomics',

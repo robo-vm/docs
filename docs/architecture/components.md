@@ -48,11 +48,11 @@ robot/robot_agent/
 ### Smart Contracts
 
 #### `RoboToken.sol`
-ERC-20 token contract:
-- Total supply: 1,000,000 RX
+BEP-20 token contract:
+- Total supply: 1,000,000,000 RVM
 - Decimals: 18
 - Transfer, approval, minting functions
-- Standard ERC-20 interface
+- Standard BEP-20 interface
 
 #### `RoboTask.sol`
 Task management contract:

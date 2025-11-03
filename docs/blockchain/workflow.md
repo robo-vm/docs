@@ -12,7 +12,7 @@ Step-by-step workflow for task execution on the blockchain.
 
 ```solidity
 // Creator calls
-createTask("Map building floor 3", 100 * 10**18); // 100 RX
+createTask("Map building floor 3", 100 * 10**18); // 100 RVM
 ```
 
 **What happens:**
@@ -43,7 +43,7 @@ for event in event_filter.get_new_entries():
 
 ```python
 # Robot calculates bid
-cost = calculate_task_cost(description)  # 80 RX
+cost = calculate_task_cost(description)  # 80 RVM
 eta = estimate_completion_time()  # 300 seconds
 
 # Submit bid
@@ -55,7 +55,7 @@ tx = contract.functions.placeBid(
 ```
 
 **Bid Structure:**
-- Price (RX tokens)
+- Price (RVM tokens)
 - Estimated time (seconds)
 - Robot reputation (from Reputation contract)
 - Current stake (if required)
@@ -168,9 +168,9 @@ If result is disputed:
 
 ```
 Task: "Patrol area X"
-├─ Robot A bids: 50 RX, 10 min
-├─ Robot B bids: 45 RX, 15 min
-├─ Robot C bids: 60 RX, 8 min
+├─ Robot A bids: 50 RVM, 10 min
+├─ Robot B bids: 45 RVM, 15 min
+├─ Robot C bids: 60 RVM, 8 min
 │
 └─ Winner: Robot B (best price/quality ratio)
 ```
@@ -191,10 +191,10 @@ Task: "Map large building"
 1. **Batch operations** - Combine multiple actions
 2. **Use events** - For off-chain updates
 3. **Optimize storage** - Store hashes, not full data
-4. **Layer 2** - Use Polygon/Arbitrum for lower costs
+4. **Layer 2** - Use BSC/Arbitrum for lower costs
 5. **State channels** - For frequent micro-payments
 
 ---
 
-Next: [ROBOX Token](/docs/token/overview)
+Next: [RoboVM Token](/docs/token/overview)
 

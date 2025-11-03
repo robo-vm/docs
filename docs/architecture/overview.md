@@ -11,7 +11,7 @@ RoboVM follows a three-layer architecture that enables decentralized robot coord
 ```
 ┌──────────────────────────────┐
 │       Blockchain Layer        │
-│ (Ethereum / Polygon / L2)     │
+│ (Binance Smart Chain (BSC))     │
 │ Smart Contracts:              │
 │  - Task Allocation            │
 │  - Reputation & Tokens        │
@@ -59,7 +59,7 @@ Each robot runs in an isolated VM environment:
 Smart contracts handle:
 - **Task Allocation**: Decentralized task distribution
 - **Reputation System**: Track robot performance
-- **Token Economy**: ROBOX (RX) token for rewards and payments
+- **Token Economy**: RoboVM (RVM) token for rewards and payments
 - **Data Ledger**: Immutable record of all transactions
 
 ## Communication Flow
@@ -78,10 +78,10 @@ Smart contracts handle:
 | Robot Control | ROS2 (Robot Operating System 2) |
 | Simulation | Gazebo / Webots / Isaac Sim |
 | VM Management | Docker / VirtualBox / Kubernetes |
-| Blockchain | Ethereum (Sepolia testnet) / Polygon |
+| Blockchain | Binance Smart Chain (BSC) |
 | Smart Contracts | Solidity + Hardhat |
 | Off-chain Communication | IPFS / MQTT / REST API |
-| Token | ERC-20 (ROBOX - RX) |
+| Token | BEP-20 (RoboVM - RVM) |
 
 ## Benefits of This Architecture
 
@@ -93,5 +93,5 @@ Smart contracts handle:
 
 ---
 
-Next: Learn about [Blockchain Integration](/docs/blockchain/overview) or [ROBOX Token](/docs/token/overview).
+Next: Learn about [Blockchain Integration](/docs/blockchain/overview) or [RoboVM Token](/docs/token/overview).
 

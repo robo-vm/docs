@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# ROBOX Token Smart Contract
+# RoboVM Token Smart Contract
 
-Technical details of the ROBOX (RX) ERC-20 token contract.
+Technical details of the RoboVM (RVM) BEP-20 token contract.
 
 ## Contract Overview
 
@@ -16,9 +16,9 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract RoboToken is ERC20, Ownable {
-    uint256 public constant TOTAL_SUPPLY = 1_000_000 * 10**18;
+    uint256 public constant TOTAL_SUPPLY = 1_000_000_000 * 10**18;
     
-    constructor() ERC20("ROBOX", "RX") {
+    constructor() ERC20("RoboVM", "RVM") {
         _mint(msg.sender, TOTAL_SUPPLY);
     }
 }
@@ -26,7 +26,7 @@ contract RoboToken is ERC20, Ownable {
 
 ## Key Features
 
-### Standard ERC-20 Functions
+### Standard BEP-20 Functions (ERC-20 Compatible)
 
 - `transfer(address to, uint256 amount)` - Send tokens
 - `transferFrom(address from, address to, uint256 amount)` - Transfer on behalf
@@ -114,7 +114,7 @@ const RoboToken = artifacts.require("RoboToken");
 
 // Get balance
 const balance = await roboToken.balanceOf(robotAddress);
-console.log(`Balance: ${balance.toString()} RX`);
+console.log(`Balance: ${balance.toString()} RVM`);
 
 // Transfer tokens
 await roboToken.transfer(recipientAddress, amount, { from: sender });
@@ -136,7 +136,7 @@ robo_token = w3.eth.contract(
 
 # Check balance
 balance = robo_token.functions.balanceOf(robot_address).call()
-print(f"Balance: {balance / 10**18} RX")
+print(f"Balance: {balance / 10**18} RVM")
 
 # Transfer
 tx = robo_token.functions.transfer(
@@ -154,29 +154,29 @@ tx = robo_token.functions.transfer(
 
 ```bash
 # Using Hardhat
-npx hardhat run scripts/deploy-token.js --network sepolia
+npx hardhat run scripts/deploy-token.js --network bsc
 
 # Deployed address will be saved
 # Add to .env file
-ROBOX_TOKEN_ADDRESS=0x...
+ROBOVM_TOKEN_ADDRESS=0x...
 ```
 
 ### Verification
 
 ```bash
-npx hardhat verify --network sepolia \
+npx hardhat verify --network bsc \
   --contract contracts/RoboToken.sol:RoboToken \
   0x...DEPLOYED_ADDRESS
 ```
 
 ## Contract Address
 
-**Sepolia Testnet:**
+**BSC Testnet:**
 ```
 TBD - Deploy when ready
 ```
 
-**Mainnet:**
+**BSC Mainnet:**
 ```
 TBD - Deploy after testing
 ```

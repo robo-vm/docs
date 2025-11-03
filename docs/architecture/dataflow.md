@@ -26,7 +26,7 @@ sequenceDiagram
     Robot->>IPFS: Upload result
     Robot->>Contract: submitResult(taskId, CID)
     Contract->>Contract: Verify result
-    Contract->>Robot: Transfer RX tokens
+    Contract->>Robot: Transfer RVM tokens
 ```
 
 ## Communication Protocols
@@ -85,9 +85,9 @@ struct Task {
 
 ### Scenario: Autonomous Mapping Mission
 
-1. **Contract Event** → `TaskCreated(taskId=5, reward=100 RX, desc="Map area X")`
+1. **Contract Event** → `TaskCreated(taskId=5, reward=100 RVM, desc="Map area X")`
 2. **Robot Listener** → Detects event, evaluates feasibility
-3. **Robot Decision** → Calculates cost: 80 RX, ETA: 5 minutes
+3. **Robot Decision** → Calculates cost: 80 RVM, ETA: 5 minutes
 4. **Blockchain Transaction** → `placeBid(taskId=5, price=80, eta=300)`
 5. **Contract Assignment** → `assignBestBid(taskId=5)` → Robot A wins
 6. **ROS2 Command** → Robot starts mapping routine
@@ -95,7 +95,7 @@ struct Task {
 8. **IPFS Upload** → Map file uploaded, CID received
 9. **Result Submission** → `submitResult(taskId=5, CID="Qm...")`
 10. **Verification** → Creator verifies result
-11. **Finalization** → `finalize(taskId=5)` → 100 RX transferred
+11. **Finalization** → `finalize(taskId=5)` → 100 RVM transferred
 
 ## Real-Time Data Streams
 

@@ -2,9 +2,9 @@
 sidebar_position: 4
 ---
 
-# ROBOX Token Use Cases
+# RoboVM Token Use Cases
 
-Real-world applications and scenarios for the ROBOX (RX) token.
+Real-world applications and scenarios for the RoboVM (RVM) token.
 
 ## Payment Scenarios
 
@@ -14,9 +14,9 @@ Real-world applications and scenarios for the ROBOX (RX) token.
 
 ```
 Task: "Map warehouse floor 2"
-Reward: 100 RX
+Reward: 100 RVM
 
-Robot completes task → Receives 100 RX
+Robot completes task → Receives 100 RVM
 ```
 
 ### 2. Data Purchase
@@ -27,7 +27,7 @@ Robot completes task → Receives 100 RX
 Robot A: Has updated map of area X
 Robot B: Needs map data
 
-Robot B pays 10 RX → Receives map data
+Robot B pays 10 RVM → Receives map data
 ```
 
 ### 3. Resource Sharing
@@ -36,7 +36,7 @@ Robot B pays 10 RX → Receives map data
 
 ```
 Robot A: Reserves charging slot
-Robot B: Pays 5 RX for priority access
+Robot B: Pays 5 RVM for priority access
 ```
 
 ## Staking Scenarios
@@ -46,10 +46,10 @@ Robot B: Pays 5 RX for priority access
 **Scenario:** New robot joins network
 
 ```
-Robot stakes 100 RX
+Robot stakes 100 RVM
 ├─ Proves commitment
 ├─ Unlocks higher-value tasks
-└─ Earns 5% APR (5 RX/year)
+└─ Earns 5% APR (5 RVM/year)
 ```
 
 ### 2. Task Qualification
@@ -58,9 +58,9 @@ Robot stakes 100 RX
 
 ```
 Task: "Critical emergency response"
-Requirement: 500 RX stake
+Requirement: 500 RVM stake
 
-Robot stakes 500 RX → Qualifies for task
+Robot stakes 500 RVM → Qualifies for task
 ```
 
 ### 3. Fraud Prevention
@@ -69,7 +69,7 @@ Robot stakes 500 RX → Qualifies for task
 
 ```
 Robot submits fake result
-├─ Stake slashed (500 RX burned)
+├─ Stake slashed (500 RVM burned)
 ├─ Reputation decreased
 └─ Banned from network
 ```
@@ -82,9 +82,9 @@ Robot submits fake result
 
 ```
 Proposal: "Add machine learning rewards"
-├─ Requires 1,000 RX to propose
+├─ Requires 1,000 RVM to propose
 ├─ Voting period: 7 days
-├─ Quorum: 100,000 RX votes
+├─ Quorum: 100,000 RVM votes
 └─ Result: Approved → Feature added
 ```
 
@@ -107,7 +107,7 @@ Proposal: "Increase task rewards by 10%"
 
 ```
 Company:
-├─ Holds 10,000 RX tokens
+├─ Holds 10,000 RVM tokens
 ├─ Distributes to robots as needed
 ├─ Tracks performance via reputation
 └─ Participates in governance
@@ -119,12 +119,12 @@ Company:
 
 ```
 High demand area:
-├─ Task reward: 200 RX (increased)
+├─ Task reward: 200 RVM (increased)
 ├─ Multiple robots bid
 └─ Best bid wins
 
 Low demand area:
-├─ Task reward: 50 RX (standard)
+├─ Task reward: 50 RVM (standard)
 └─ Fewer bids
 ```
 
@@ -134,10 +134,10 @@ Low demand area:
 
 ```
 Mission: "Map entire building"
-├─ Robot A: Floor 1 (50 RX)
-├─ Robot B: Floor 2 (50 RX)
-├─ Robot C: Floor 3 (50 RX)
-└─ Total: 150 RX distributed
+├─ Robot A: Floor 1 (50 RVM)
+├─ Robot B: Floor 2 (50 RVM)
+├─ Robot C: Floor 3 (50 RVM)
+└─ Total: 150 RVM distributed
 ```
 
 ## Integration Examples
@@ -147,7 +147,7 @@ Mission: "Map entire building"
 ```python
 # Robot pays for cloud processing
 def pay_for_processing(data, cost_rx):
-    # Transfer RX to service provider
+    # Transfer RVM to service provider
     robo_token.transfer(service_address, cost_rx)
     
     # Use service
@@ -160,7 +160,7 @@ def pay_for_processing(data, cost_rx):
 ```python
 # Robot pays sensor network for data
 def access_sensor_network(area, duration):
-    cost = calculate_cost(duration)  # in RX
+    cost = calculate_cost(duration)  # in RVM
     robo_token.transfer(sensor_network_address, cost)
     
     # Access granted
@@ -173,20 +173,20 @@ def access_sensor_network(area, duration):
 ### 1. NFT Robot Identity
 
 - Each robot has unique NFT
-- NFT holders earn bonus RX
+- NFT holders earn bonus RVM
 - Transferable ownership
 
 ### 2. Insurance Pool
 
-- Robots contribute RX to insurance pool
+- Robots contribute RVM to insurance pool
 - Payouts for damages or failures
 - Risk-based pricing
 
 ### 3. Research Grants
 
 - Researchers propose studies
-- Community votes with RX
-- Grants distributed in RX
+- Community votes with RVM
+- Grants distributed in RVM
 
 ---
 
