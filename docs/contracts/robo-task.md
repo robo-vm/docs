@@ -269,5 +269,5 @@ event_filter = robo_task.events.TaskCreated.create_filter(
 
 ---
 
-Next: [Reputation Contract](/docs/contracts/reputation) or [Testing](/docs/contracts/tests)
+Next: [Reputation Contract](/docs/contracts/reputation) or [ROBOX Token](/docs/token/overview)
 

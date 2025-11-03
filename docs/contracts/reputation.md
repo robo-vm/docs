@@ -241,5 +241,5 @@ Score = 0 + (50 × 10) - (2 × 50) + 100 - 0
 
 ---
 
-Next: [Tests](/docs/contracts/tests) or [Deployment](/docs/contracts/deploy)
+Next: [ROBOX Token](/docs/token/overview) or [Getting Started](/docs/getting-started)
 
